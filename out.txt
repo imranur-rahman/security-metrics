@@ -1,259 +1,259 @@
-attackvector: Conduct Open-Source Supply Chain Attack
+attackvector: AV-000 Conduct Open-Source Supply Chain Attack
 safeguards: 
-Software Bill of Materials (SBOM)
-Patch Management
-Software Composition Analysis (SCA)
-Application Security Testing (AST)
-Runtime Application Self-Protection (RASP)
-Prevent Script Execution
-Use of Security, Quality and Health Metrics
-Code Isolation and Sandboxing
-Audit
-Security Assessment
-Vulnerability Assessment
-Penetration Testing
-Integrate Open Source Vulnerability scanners into CI/CD pipelines
-Establish vetting process for open-source components
+SG-001 Software Bill of Materials (SBOM)
+SG-002 Patch Management
+SG-003 Software Composition Analysis (SCA)
+SG-005 Application Security Testing (AST)
+SG-006 Runtime Application Self-Protection (RASP)
+SG-010 Prevent Script Execution
+SG-013 Use of Security, Quality and Health Metrics
+SG-014 Code Isolation and Sandboxing
+SG-023 Audit
+SG-024 Security Assessment
+SG-025 Vulnerability Assessment
+SG-026 Penetration Testing
+SG-036 Integrate Open Source Vulnerability scanners into CI/CD pipelines
+SG-039 Establish vetting process for open-source components
 
 
-attackvector: Develop and Advertise Distinct Malicious Package from Scratch
-safeguards: 
-
-
-attackvector: Create Name Confusion with Legitimate Package
-safeguards: 
-Code Signing
-Typo Guard
-Typo Detection
-Preventive squatting
-
-
-attackvector: Combosquatting
+attackvector: AV-100 Develop and Advertise Distinct Malicious Package from Scratch
 safeguards: 
 
 
-attackvector: Altering Word Order
+attackvector: AV-200 Create Name Confusion with Legitimate Package
+safeguards: 
+SG-007 Code Signing
+SG-011 Typo Guard
+SG-012 Typo Detection
+SG-038 Preventive squatting
+
+
+attackvector: AV-201 Combosquatting
 safeguards: 
 
 
-attackvector: Manipulating Word Separators
+attackvector: AV-202 Altering Word Order
 safeguards: 
 
 
-attackvector: Typosquatting
+attackvector: AV-203 Manipulating Word Separators
 safeguards: 
 
 
-attackvector: Built-in Package
+attackvector: AV-204 Typosquatting
 safeguards: 
 
 
-attackvector: Brandjacking
+attackvector: AV-205 Built-in Package
 safeguards: 
 
 
-attackvector: Similarity Attack
+attackvector: AV-206 Brandjacking
 safeguards: 
 
 
-attackvector: Omitting Scope or Namespace
+attackvector: AV-207 Similarity Attack
 safeguards: 
 
 
-attackvector: Subvert Legitimate Package
-safeguards: 
-Remove un-used Dependencies
-Version Pinning
-
-
-attackvector: Inject Into Sources of Legitimate Package
-safeguards: 
-Manual Source Code Review
-
-
-attackvector: Introduce Malicious Code through Hypocrite Merge Request
-safeguards: 
-Pull/Merge Request Review
-Protect Sensitive Branches
-
-
-attackvector: Contribute as Maintainer
-safeguards: 
-Pull/Merge Request Review
-Protect Sensitive Branches
-User Account Management
-
-
-attackvector: Tamper with Version Control System
+attackvector: AV-208 Omitting Scope or Namespace
 safeguards: 
 
 
-attackvector: Make Immature Vulnerability Exploitable
+attackvector: AV-001 Subvert Legitimate Package
+safeguards: 
+SG-009 Remove un-used Dependencies
+SG-029 Version Pinning
+
+
+attackvector: AV-300 Inject Into Sources of Legitimate Package
+safeguards: 
+SG-004 Manual Source Code Review
+
+
+attackvector: AV-301 Introduce Malicious Code through Hypocrite Merge Request
+safeguards: 
+SG-015 Pull/Merge Request Review
+SG-016 Protect Sensitive Branches
+
+
+attackvector: AV-302 Contribute as Maintainer
+safeguards: 
+SG-015 Pull/Merge Request Review
+SG-016 Protect Sensitive Branches
+SG-022 User Account Management
+
+
+attackvector: AV-303 Tamper with Version Control System
 safeguards: 
 
 
-attackvector: Exploit Rendering Weakness
+attackvector: AV-304 Make Immature Vulnerability Exploitable
 safeguards: 
 
 
-attackvector: Exploit Unicode Bidirectional Algorithm
+attackvector: AV-305 Exploit Rendering Weakness
 safeguards: 
 
 
-attackvector: Use Homoglyphs
+attackvector: AV-306 Exploit Unicode Bidirectional Algorithm
 safeguards: 
 
 
-attackvector: Prevent Display of File Differences
-safeguards: 
-Pull/Merge Request Review
-Protect Sensitive Branches
-
-
-attackvector: Hide in Generated/Compiled/Minified Code
+attackvector: AV-307 Use Homoglyphs
 safeguards: 
 
 
-attackvector: Inject During the Build of Legitimate Package
+attackvector: AV-308 Prevent Display of File Differences
 safeguards: 
-Build Dependencies from Source
-Isolation of Builds
-Ephemeral Build Environment
-Minimal Set of Trusted Build Dependencies in Release Jobs
-Configure build jobs through code
-Reproducible builds
-Integrity check of dependencies through cryptographic hashes
+SG-015 Pull/Merge Request Review
+SG-016 Protect Sensitive Branches
 
 
-attackvector: Run Malicious Build
+attackvector: AV-309 Hide in Generated/Compiled/Minified Code
 safeguards: 
 
 
-attackvector: Tamper Build Job as Maintainer
+attackvector: AV-400 Inject During the Build of Legitimate Package
 safeguards: 
-User Account Management
+SG-008 Build Dependencies from Source
+SG-032 Isolation of Builds
+SG-033 Ephemeral Build Environment
+SG-034 Minimal Set of Trusted Build Dependencies in Release Jobs
+SG-035 Configure build jobs through code
+SG-037 Reproducible builds
+SG-043 Integrity check of dependencies through cryptographic hashes
 
 
-attackvector: Tamper with Exposed Build System
-safeguards: 
-
-
-attackvector: Distribute Malicious Version of Legitimate Package
-safeguards: 
-Code Signing
-Build Dependencies from Source
-Reproducible builds
-Integrity check of dependencies through cryptographic hashes
-
-
-attackvector: Dangling Reference
-safeguards: 
-Dependency Resolution Rules
-Establish Internal Repository Mirrors and reference one private feed, not multiple
-
-
-attackvector: Mask Legitimate Package
-safeguards: 
-Establish Internal Repository Mirrors and reference one private feed, not multiple
-
-
-attackvector: Prevent Update to Non-Vulnerable Version
+attackvector: AV-401 Run Malicious Build
 safeguards: 
 
 
-attackvector: Distribute as Package Maintainer
+attackvector: AV-402 Tamper Build Job as Maintainer
 safeguards: 
-User Account Management
-Establish Internal Repository Mirrors and reference one private feed, not multiple
+SG-022 User Account Management
 
 
-attackvector: Inject into Hosting System
-safeguards: 
-Establish Internal Repository Mirrors and reference one private feed, not multiple
-
-
-attackvector: MITM
+attackvector: AV-403 Tamper with Exposed Build System
 safeguards: 
 
 
-attackvector: DNS Cache Poisoning
+attackvector: AV-500 Distribute Malicious Version of Legitimate Package
+safeguards: 
+SG-007 Code Signing
+SG-008 Build Dependencies from Source
+SG-037 Reproducible builds
+SG-043 Integrity check of dependencies through cryptographic hashes
+
+
+attackvector: AV-501 Dangling Reference
+safeguards: 
+SG-030 Dependency Resolution Rules
+SG-031 Establish Internal Repository Mirrors and reference one private feed, not multiple
+
+
+attackvector: AV-502 Mask Legitimate Package
+safeguards: 
+SG-031 Establish Internal Repository Mirrors and reference one private feed, not multiple
+
+
+attackvector: AV-503 Prevent Update to Non-Vulnerable Version
 safeguards: 
 
 
-attackvector: Tamper Legitimate URL
+attackvector: AV-504 Distribute as Package Maintainer
 safeguards: 
-Dependency Resolution Rules
+SG-022 User Account Management
+SG-031 Establish Internal Repository Mirrors and reference one private feed, not multiple
 
 
-attackvector: Abuse Dependency Resolution Mechanism
+attackvector: AV-505 Inject into Hosting System
 safeguards: 
-Dependency Resolution Rules
+SG-031 Establish Internal Repository Mirrors and reference one private feed, not multiple
 
 
-attackvector: Compromise User (Project Maintainer/Administrator)
-safeguards: 
-User Account Management
-
-
-attackvector: Bribe or Blackmail Legitimate User
+attackvector: AV-506 MITM
 safeguards: 
 
 
-attackvector: Take-over Legitimate Account
-safeguards: 
-Multi-Factor Authentication
-Password Policy
-Login Protection Mechanism
-Session Timeout
-Token Protection Mechanisms
-
-
-attackvector: Reuse of Compromised Credentials
+attackvector: AV-507 DNS Cache Poisoning
 safeguards: 
 
 
-attackvector: Bruteforce
+attackvector: AV-508 Tamper Legitimate URL
+safeguards: 
+SG-030 Dependency Resolution Rules
+
+
+attackvector: AV-509 Abuse Dependency Resolution Mechanism
+safeguards: 
+SG-030 Dependency Resolution Rules
+
+
+attackvector: AV-600 Compromise User (Project Maintainer/Administrator)
+safeguards: 
+SG-022 User Account Management
+
+
+attackvector: AV-601 Bribe or Blackmail Legitimate User
 safeguards: 
 
 
-attackvector: Reuse of Leaked API Tokens
+attackvector: AV-602 Take-over Legitimate Account
+safeguards: 
+SG-017 Multi-Factor Authentication
+SG-018 Password Policy
+SG-019 Login Protection Mechanism
+SG-020 Session Timeout
+SG-021 Token Protection Mechanisms
+
+
+attackvector: AV-603 Reuse of Compromised Credentials
 safeguards: 
 
 
-attackvector: Social Engineering to Obtain Credentials
+attackvector: AV-604 Bruteforce
 safeguards: 
 
 
-attackvector: Reuse of Existing Session
+attackvector: AV-605 Reuse of Leaked API Tokens
 safeguards: 
 
 
-attackvector: Resurrect Expired Domain Associated With Legitimate Account
+attackvector: AV-606 Social Engineering to Obtain Credentials
 safeguards: 
 
 
-attackvector: Change Ethos
+attackvector: AV-607 Reuse of Existing Session
 safeguards: 
 
 
-attackvector: Compromise  System
-safeguards: 
-Use of Dedicated Build Service
-
-
-attackvector: Exploit Weak Configuration
+attackvector: AV-608 Resurrect Expired Domain Associated With Legitimate Account
 safeguards: 
 
 
-attackvector: Exploit Vulnerabilities
+attackvector: AV-801 Change Ethos
 safeguards: 
 
 
-attackvector: Infect through Malicious Component
+attackvector: AV-700 Compromise  System
+safeguards: 
+SG-042 Use of Dedicated Build Service
+
+
+attackvector: AV-701 Exploit Weak Configuration
 safeguards: 
 
 
-attackvector: Become Maintainer
+attackvector: AV-702 Exploit Vulnerabilities
+safeguards: 
+
+
+attackvector: AV-703 Infect through Malicious Component
+safeguards: 
+
+
+attackvector: AV-800 Become Maintainer
 safeguards: 
 
 

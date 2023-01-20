@@ -25,7 +25,7 @@ for attackvector in attackvectors_json:
             for safeguard in safeguards_json:
                 if safeguard["sgId"] == mapped_safeguard["sgId"]:
                     # Save the name for the safeguard
-                    extracted_safeguards.append(safeguard["sgName"])
-    print("attackvector: "+ attackvector["avName"] + "\nsafeguards: ")
+                    extracted_safeguards.append(safeguard["sgId"] + " " + safeguard["sgName"])
+    print("attackvector: "+ attackvector["avId"] + " " + attackvector["avName"] + "\nsafeguards: ")
     [print (x) for x in extracted_safeguards]
     print("\n")
