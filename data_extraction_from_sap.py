@@ -11,7 +11,7 @@ with open("risk-explorer-for-software-supply-chains/src/data/safeguards.json", "
     safeguards_json = json.load(f)
 # print(safeguards_json)
 
-# Open CSV file to store the data
+# Open CSV file to store the attackvector data
 attackvector_csv = open("attackvectors.csv", "w")
 attackvector_header = ["AV ID", "Attack Vector", "Safeguard", "SG ID"]
 attackvector_writer = csv.DictWriter(attackvector_csv, fieldnames=attackvector_header)
@@ -44,3 +44,25 @@ for attackvector in attackvectors_json:
     print("\n")
 
 attackvector_csv.close()
+
+# Open CSV file to store safeguard data
+safeguard_csv = open("safeguards.csv", "w")
+safeguard_header = ["SG ID", "Safeguard Name", "Description", "Directive", "Preventive", "Detective",
+                "Corrective", "Project Maintainer", "Administrator", "Downstream User"]
+safeguard_write = csv.DictWriter(safeguard_csv, fieldnames=safeguard_header)
+safeguard_write.writeheader()
+
+for safeguard in safeguards_json:
+    safeguard_write.writerow({"SG ID": safeguard["sgId"],
+                            "Safeguard Name": safeguard["sgName"],
+                            "Description": safeguard["info"][0]["Description"],
+                            "Directive": safeguard["info"][0]["Directive"],
+                            "Preventive": safeguard["info"][0]["Preventive"],
+                            "Detective": safeguard["info"][0]["Detective"],
+                            "Corrective": safeguard["info"][0]["Corrective"],
+                            "Project Maintainer": safeguard["info"][0]["Project Maintainer"],
+                            "Administrator": safeguard["info"][0]["Administrator"],
+                            "Downstream User": safeguard["info"][0]["Downstream User"],
+                            })
+
+safeguard_csv.close()
