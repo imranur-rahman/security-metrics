@@ -1,0 +1,259 @@
+attackvector: Conduct Open-Source Supply Chain Attack
+safeguards: 
+Software Bill of Materials (SBOM)
+Patch Management
+Software Composition Analysis (SCA)
+Application Security Testing (AST)
+Runtime Application Self-Protection (RASP)
+Prevent Script Execution
+Use of Security, Quality and Health Metrics
+Code Isolation and Sandboxing
+Audit
+Security Assessment
+Vulnerability Assessment
+Penetration Testing
+Integrate Open Source Vulnerability scanners into CI/CD pipelines
+Establish vetting process for open-source components
+
+
+attackvector: Develop and Advertise Distinct Malicious Package from Scratch
+safeguards: 
+
+
+attackvector: Create Name Confusion with Legitimate Package
+safeguards: 
+Code Signing
+Typo Guard
+Typo Detection
+Preventive squatting
+
+
+attackvector: Combosquatting
+safeguards: 
+
+
+attackvector: Altering Word Order
+safeguards: 
+
+
+attackvector: Manipulating Word Separators
+safeguards: 
+
+
+attackvector: Typosquatting
+safeguards: 
+
+
+attackvector: Built-in Package
+safeguards: 
+
+
+attackvector: Brandjacking
+safeguards: 
+
+
+attackvector: Similarity Attack
+safeguards: 
+
+
+attackvector: Omitting Scope or Namespace
+safeguards: 
+
+
+attackvector: Subvert Legitimate Package
+safeguards: 
+Remove un-used Dependencies
+Version Pinning
+
+
+attackvector: Inject Into Sources of Legitimate Package
+safeguards: 
+Manual Source Code Review
+
+
+attackvector: Introduce Malicious Code through Hypocrite Merge Request
+safeguards: 
+Pull/Merge Request Review
+Protect Sensitive Branches
+
+
+attackvector: Contribute as Maintainer
+safeguards: 
+Pull/Merge Request Review
+Protect Sensitive Branches
+User Account Management
+
+
+attackvector: Tamper with Version Control System
+safeguards: 
+
+
+attackvector: Make Immature Vulnerability Exploitable
+safeguards: 
+
+
+attackvector: Exploit Rendering Weakness
+safeguards: 
+
+
+attackvector: Exploit Unicode Bidirectional Algorithm
+safeguards: 
+
+
+attackvector: Use Homoglyphs
+safeguards: 
+
+
+attackvector: Prevent Display of File Differences
+safeguards: 
+Pull/Merge Request Review
+Protect Sensitive Branches
+
+
+attackvector: Hide in Generated/Compiled/Minified Code
+safeguards: 
+
+
+attackvector: Inject During the Build of Legitimate Package
+safeguards: 
+Build Dependencies from Source
+Isolation of Builds
+Ephemeral Build Environment
+Minimal Set of Trusted Build Dependencies in Release Jobs
+Configure build jobs through code
+Reproducible builds
+Integrity check of dependencies through cryptographic hashes
+
+
+attackvector: Run Malicious Build
+safeguards: 
+
+
+attackvector: Tamper Build Job as Maintainer
+safeguards: 
+User Account Management
+
+
+attackvector: Tamper with Exposed Build System
+safeguards: 
+
+
+attackvector: Distribute Malicious Version of Legitimate Package
+safeguards: 
+Code Signing
+Build Dependencies from Source
+Reproducible builds
+Integrity check of dependencies through cryptographic hashes
+
+
+attackvector: Dangling Reference
+safeguards: 
+Dependency Resolution Rules
+Establish Internal Repository Mirrors and reference one private feed, not multiple
+
+
+attackvector: Mask Legitimate Package
+safeguards: 
+Establish Internal Repository Mirrors and reference one private feed, not multiple
+
+
+attackvector: Prevent Update to Non-Vulnerable Version
+safeguards: 
+
+
+attackvector: Distribute as Package Maintainer
+safeguards: 
+User Account Management
+Establish Internal Repository Mirrors and reference one private feed, not multiple
+
+
+attackvector: Inject into Hosting System
+safeguards: 
+Establish Internal Repository Mirrors and reference one private feed, not multiple
+
+
+attackvector: MITM
+safeguards: 
+
+
+attackvector: DNS Cache Poisoning
+safeguards: 
+
+
+attackvector: Tamper Legitimate URL
+safeguards: 
+Dependency Resolution Rules
+
+
+attackvector: Abuse Dependency Resolution Mechanism
+safeguards: 
+Dependency Resolution Rules
+
+
+attackvector: Compromise User (Project Maintainer/Administrator)
+safeguards: 
+User Account Management
+
+
+attackvector: Bribe or Blackmail Legitimate User
+safeguards: 
+
+
+attackvector: Take-over Legitimate Account
+safeguards: 
+Multi-Factor Authentication
+Password Policy
+Login Protection Mechanism
+Session Timeout
+Token Protection Mechanisms
+
+
+attackvector: Reuse of Compromised Credentials
+safeguards: 
+
+
+attackvector: Bruteforce
+safeguards: 
+
+
+attackvector: Reuse of Leaked API Tokens
+safeguards: 
+
+
+attackvector: Social Engineering to Obtain Credentials
+safeguards: 
+
+
+attackvector: Reuse of Existing Session
+safeguards: 
+
+
+attackvector: Resurrect Expired Domain Associated With Legitimate Account
+safeguards: 
+
+
+attackvector: Change Ethos
+safeguards: 
+
+
+attackvector: Compromise  System
+safeguards: 
+Use of Dedicated Build Service
+
+
+attackvector: Exploit Weak Configuration
+safeguards: 
+
+
+attackvector: Exploit Vulnerabilities
+safeguards: 
+
+
+attackvector: Infect through Malicious Component
+safeguards: 
+
+
+attackvector: Become Maintainer
+safeguards: 
+
+
