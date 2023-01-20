@@ -1,3 +1,4 @@
+import csv
 import json
 
 # Assuming we have the repository of SAP downloaded in the same directory as this file
@@ -9,6 +10,12 @@ with open("risk-explorer-for-software-supply-chains/src/data/attackvectors.json"
 with open("risk-explorer-for-software-supply-chains/src/data/safeguards.json", "r", encoding="utf-8") as f:
     safeguards_json = json.load(f)
 # print(safeguards_json)
+
+# Open CSV file to store the data
+attackvector_csv = open("attackvectors.csv", "w")
+attackvector_header = ["AV ID", "Attack Vector", "Safeguard", "SG ID"]
+attackvector_writer = csv.DictWriter(attackvector_csv, fieldnames=attackvector_header)
+attackvector_writer.writeheader()
 
 for attackvector in attackvectors_json:
     # print("avId: " + attackvector["avId"])
@@ -26,6 +33,14 @@ for attackvector in attackvectors_json:
                 if safeguard["sgId"] == mapped_safeguard["sgId"]:
                     # Save the name for the safeguard
                     extracted_safeguards.append(safeguard["sgId"] + " " + safeguard["sgName"])
+
+                    # Write this instance of attackvector and safeguard in csv
+                    attackvector_writer.writerow({"AV ID": attackvector["avId"],
+                                                "Attack Vector": attackvector["avName"],
+                                                "Safeguard": safeguard["sgName"],
+                                                "SG ID": safeguard["sgId"]})
     print("attackvector: "+ attackvector["avId"] + " " + attackvector["avName"] + "\nsafeguards: ")
     [print (x) for x in extracted_safeguards]
     print("\n")
+
+attackvector_csv.close()
