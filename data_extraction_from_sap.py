@@ -10,6 +10,10 @@ with open("risk-explorer-for-software-supply-chains/src/data/attackvectors.json"
 with open("risk-explorer-for-software-supply-chains/src/data/safeguards.json", "r", encoding="utf-8") as f:
     safeguards_json = json.load(f)
 # print(safeguards_json)
+with open("risk-explorer-for-software-supply-chains/src/data/references.json", "r", encoding="utf-8") as f:
+    references_json = json.load(f)
+with open("risk-explorer-for-software-supply-chains/src/data/taxonomy.json", "r", encoding="utf-8") as f:
+    taxonomy_json = json.load(f)
 
 # Open CSV file to store the attackvector data
 attackvector_csv = open("attackvectors.csv", "w")
@@ -66,3 +70,80 @@ for safeguard in safeguards_json:
                             })
 
 safeguard_csv.close()
+
+# Open CSV file to store reference data
+reference_csv = open("references.csv", "w")
+reference_header = ["title", "link", "avId", "avName", "sgId", "sgName",
+                    "ecosystems", "packages", "contents", "year"]
+reference_write = csv.DictWriter(reference_csv, fieldnames=reference_header)
+reference_write.writeheader()
+
+for reference in references_json:
+    # There could be multiple vectors and multiple safeguards
+    # So for now writing all possible combinations
+
+    # Saving the values for each key in a list
+    # and if that key doesn't exist in a certain object, fillup with empty string
+    # This is important since later we are doing multiple nested loops
+
+    # Gather the attack vectors first
+    vectors = []
+    if reference.get("vectors") is not None:
+        vectors = [ vector for vector in reference["vectors"] ]
+    else:
+        vectors = [{
+            "avId": "",
+            "avName": ""
+        }]
+
+    # Gather the safeguards next
+    safeguards = []
+    if reference.get("safeguards") is not None:
+        safeguards = [safeguard for safeguard in reference["safeguards"]]
+    else:
+        safeguards = [{
+            "sgId": "",
+            "sgName": ""
+        }]
+
+    # Gather the ecosystems
+    ecosystems = []
+    if reference["tags"].get("ecosystems") is not None and len(reference["tags"]["ecosystems"]) > 0:
+        ecosystems = [ecosystem for ecosystem in reference["tags"]["ecosystems"]]
+    else:
+        ecosystems = [""]
+
+    packages = []
+    if reference["tags"].get("packages") is not None and len(reference["tags"]["packages"]) > 0:
+        packages = [package for package in reference["tags"]["packages"]]
+    else:
+        packages = [""]
+
+    contents = []
+    if reference["tags"].get("contents") is not None and len(reference["tags"]["contents"]) > 0:
+        contents = [content for content in reference["tags"]["contents"]]
+    else:
+        contents = [""]
+
+    if reference["tags"].get("year") is not None:
+        year = reference["tags"]["year"]
+    else:
+        year = ""
+    
+    for vector in vectors:
+        for safeguard in safeguards:
+            for ecosystem in ecosystems:
+                for package in packages:
+                    for content in contents:
+                        reference_write.writerow({"title": reference["title"],
+                                                "link": reference["link"],
+                                                "avId": vector["avId"],
+                                                "avName": vector["avName"],
+                                                "sgId": safeguard["sgId"],
+                                                "sgName": safeguard["sgName"],
+                                                "ecosystems": ecosystem,
+                                                "packages": package,
+                                                "contents": content,
+                                                "year": year})
+
+reference_csv.close()
