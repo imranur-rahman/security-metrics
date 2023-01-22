@@ -13,10 +13,19 @@ AV-000,Conduct Open-Source Supply Chain Attack,Vulnerability Assessment,SG-025
 AV-000,Conduct Open-Source Supply Chain Attack,Penetration Testing,SG-026
 AV-000,Conduct Open-Source Supply Chain Attack,Integrate Open Source Vulnerability scanners into CI/CD pipelines,SG-036
 AV-000,Conduct Open-Source Supply Chain Attack,Establish vetting process for open-source components,SG-039
+AV-100,Develop and Advertise Distinct Malicious Package from Scratch,,
 AV-200,Create Name Confusion with Legitimate Package,Code Signing,SG-007
 AV-200,Create Name Confusion with Legitimate Package,Typo Guard,SG-011
 AV-200,Create Name Confusion with Legitimate Package,Typo Detection,SG-012
 AV-200,Create Name Confusion with Legitimate Package,Preventive squatting,SG-038
+AV-201,Combosquatting,,
+AV-202,Altering Word Order,,
+AV-203,Manipulating Word Separators,,
+AV-204,Typosquatting,,
+AV-205,Built-in Package,,
+AV-206,Brandjacking,,
+AV-207,Similarity Attack,,
+AV-208,Omitting Scope or Namespace,,
 AV-001,Subvert Legitimate Package,Remove un-used Dependencies,SG-009
 AV-001,Subvert Legitimate Package,Version Pinning,SG-029
 AV-300,Inject Into Sources of Legitimate Package,Manual Source Code Review,SG-004
@@ -25,8 +34,14 @@ AV-301,Introduce Malicious Code through Hypocrite Merge Request,Protect Sensitiv
 AV-302,Contribute as Maintainer,Pull/Merge Request Review,SG-015
 AV-302,Contribute as Maintainer,Protect Sensitive Branches,SG-016
 AV-302,Contribute as Maintainer,User Account Management,SG-022
+AV-303,Tamper with Version Control System,,
+AV-304,Make Immature Vulnerability Exploitable,,
+AV-305,Exploit Rendering Weakness,,
+AV-306,Exploit Unicode Bidirectional Algorithm,,
+AV-307,Use Homoglyphs,,
 AV-308,Prevent Display of File Differences,Pull/Merge Request Review,SG-015
 AV-308,Prevent Display of File Differences,Protect Sensitive Branches,SG-016
+AV-309,Hide in Generated/Compiled/Minified Code,,
 AV-400,Inject During the Build of Legitimate Package,Build Dependencies from Source,SG-008
 AV-400,Inject During the Build of Legitimate Package,Isolation of Builds,SG-032
 AV-400,Inject During the Build of Legitimate Package,Ephemeral Build Environment,SG-033
@@ -34,7 +49,9 @@ AV-400,Inject During the Build of Legitimate Package,Minimal Set of Trusted Buil
 AV-400,Inject During the Build of Legitimate Package,Configure build jobs through code,SG-035
 AV-400,Inject During the Build of Legitimate Package,Reproducible builds,SG-037
 AV-400,Inject During the Build of Legitimate Package,Integrity check of dependencies through cryptographic hashes,SG-043
+AV-401,Run Malicious Build,,
 AV-402,Tamper Build Job as Maintainer,User Account Management,SG-022
+AV-403,Tamper with Exposed Build System,,
 AV-500,Distribute Malicious Version of Legitimate Package,Code Signing,SG-007
 AV-500,Distribute Malicious Version of Legitimate Package,Build Dependencies from Source,SG-008
 AV-500,Distribute Malicious Version of Legitimate Package,Reproducible builds,SG-037
@@ -42,15 +59,30 @@ AV-500,Distribute Malicious Version of Legitimate Package,Integrity check of dep
 AV-501,Dangling Reference,Dependency Resolution Rules,SG-030
 AV-501,Dangling Reference,"Establish Internal Repository Mirrors and reference one private feed, not multiple",SG-031
 AV-502,Mask Legitimate Package,"Establish Internal Repository Mirrors and reference one private feed, not multiple",SG-031
+AV-503,Prevent Update to Non-Vulnerable Version,,
 AV-504,Distribute as Package Maintainer,User Account Management,SG-022
 AV-504,Distribute as Package Maintainer,"Establish Internal Repository Mirrors and reference one private feed, not multiple",SG-031
 AV-505,Inject into Hosting System,"Establish Internal Repository Mirrors and reference one private feed, not multiple",SG-031
+AV-506,MITM,,
+AV-507,DNS Cache Poisoning,,
 AV-508,Tamper Legitimate URL,Dependency Resolution Rules,SG-030
 AV-509,Abuse Dependency Resolution Mechanism,Dependency Resolution Rules,SG-030
 AV-600,Compromise User (Project Maintainer/Administrator),User Account Management,SG-022
+AV-601,Bribe or Blackmail Legitimate User,,
 AV-602,Take-over Legitimate Account,Multi-Factor Authentication,SG-017
 AV-602,Take-over Legitimate Account,Password Policy,SG-018
 AV-602,Take-over Legitimate Account,Login Protection Mechanism,SG-019
 AV-602,Take-over Legitimate Account,Session Timeout,SG-020
 AV-602,Take-over Legitimate Account,Token Protection Mechanisms,SG-021
+AV-603,Reuse of Compromised Credentials,,
+AV-604,Bruteforce,,
+AV-605,Reuse of Leaked API Tokens,,
+AV-606,Social Engineering to Obtain Credentials,,
+AV-607,Reuse of Existing Session,,
+AV-608,Resurrect Expired Domain Associated With Legitimate Account,,
+AV-801,Change Ethos,,
 AV-700,Compromise  System,Use of Dedicated Build Service,SG-042
+AV-701,Exploit Weak Configuration,,
+AV-702,Exploit Vulnerabilities,,
+AV-703,Infect through Malicious Component,,
+AV-800,Become Maintainer,,

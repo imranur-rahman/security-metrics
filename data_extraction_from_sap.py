@@ -27,24 +27,35 @@ for attackvector in attackvectors_json:
     infos = attackvector["info"] # This is a list
     for info in infos:
         mapped_safeguards = info["Mapped Safeguard"] # This is a list
-        for mapped_safeguard in mapped_safeguards:
-            # print("avId: " + attackvector["avId"] + " sgId: " + mapped_safeguard["sgId"])
-            # extracted_safeguards.append(mapped_safeguard["sgId"])
-            # At this point we have the set of safeguard ids for each attackvector id
-    
-            # Find the safeguard name (from safeguards.json) for this attackvector
-            for safeguard in safeguards_json:
-                if safeguard["sgId"] == mapped_safeguard["sgId"]:
-                    # Save the name for the safeguard
-                    extracted_safeguards.append(safeguard["sgId"] + " " + safeguard["sgName"])
 
-                    # Write this instance of attackvector and safeguard in csv
-                    attackvector_writer.writerow({
-                        "AV ID": attackvector["avId"],
-                        "Attack Vector": attackvector["avName"],
-                        "Safeguard": safeguard["sgName"],
-                        "SG ID": safeguard["sgId"]
-                    })
+        # If the list is empty, add an empty safeguard to keep the attack
+        # vector in the CSV file
+        if len(mapped_safeguards) > 0:
+            for mapped_safeguard in mapped_safeguards:
+                # print("avId: " + attackvector["avId"] + " sgId: " + mapped_safeguard["sgId"])
+                # extracted_safeguards.append(mapped_safeguard["sgId"])
+                # At this point we have the set of safeguard ids for each attackvector id
+        
+                # Find the safeguard name (from safeguards.json) for this attackvector
+                for safeguard in safeguards_json:
+                    if safeguard["sgId"] == mapped_safeguard["sgId"]:
+                        # Save the name for the safeguard
+                        extracted_safeguards.append(safeguard["sgId"] + " " + safeguard["sgName"])
+
+                        # Write this instance of attackvector and safeguard in csv
+                        attackvector_writer.writerow({
+                            "AV ID": attackvector["avId"],
+                            "Attack Vector": attackvector["avName"],
+                            "Safeguard": safeguard["sgName"],
+                            "SG ID": safeguard["sgId"]
+                        })
+        else:
+            attackvector_writer.writerow({
+                "AV ID": attackvector["avId"],
+                "Attack Vector": attackvector["avName"],
+                "Safeguard": "",
+                "SG ID": ""
+            })
     print("attackvector: "+ attackvector["avId"] + " " + attackvector["avName"] + "\nsafeguards: ")
     [print (x) for x in extracted_safeguards]
     print("\n")
@@ -154,7 +165,10 @@ for reference in references_json:
 reference_csv.close()
 
 # A recursive helper function to write rows for each attackvector and it's children (attack vectors)
-# If the child has more children (more child attack vector) recursively call this func
+# If the child has more children (more child attack vector) recursively call this func for that child
+
+# Taxonomy (of attack vectors) is a tree and we are running this recursive func for
+# each node (attack vector) of the tree
 def taxonomy_writerow(taxonomy_write, attackvector, children):
     for child in children:
         taxonomy_write.writerow({
