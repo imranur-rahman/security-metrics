@@ -39,10 +39,12 @@ for attackvector in attackvectors_json:
                     extracted_safeguards.append(safeguard["sgId"] + " " + safeguard["sgName"])
 
                     # Write this instance of attackvector and safeguard in csv
-                    attackvector_writer.writerow({"AV ID": attackvector["avId"],
-                                                "Attack Vector": attackvector["avName"],
-                                                "Safeguard": safeguard["sgName"],
-                                                "SG ID": safeguard["sgId"]})
+                    attackvector_writer.writerow({
+                        "AV ID": attackvector["avId"],
+                        "Attack Vector": attackvector["avName"],
+                        "Safeguard": safeguard["sgName"],
+                        "SG ID": safeguard["sgId"]
+                    })
     print("attackvector: "+ attackvector["avId"] + " " + attackvector["avName"] + "\nsafeguards: ")
     [print (x) for x in extracted_safeguards]
     print("\n")
@@ -57,17 +59,18 @@ safeguard_write = csv.DictWriter(safeguard_csv, fieldnames=safeguard_header)
 safeguard_write.writeheader()
 
 for safeguard in safeguards_json:
-    safeguard_write.writerow({"SG ID": safeguard["sgId"],
-                            "Safeguard Name": safeguard["sgName"],
-                            "Description": safeguard["info"][0]["Description"],
-                            "Directive": safeguard["info"][0]["Directive"],
-                            "Preventive": safeguard["info"][0]["Preventive"],
-                            "Detective": safeguard["info"][0]["Detective"],
-                            "Corrective": safeguard["info"][0]["Corrective"],
-                            "Project Maintainer": safeguard["info"][0]["Project Maintainer"],
-                            "Administrator": safeguard["info"][0]["Administrator"],
-                            "Downstream User": safeguard["info"][0]["Downstream User"],
-                            })
+    safeguard_write.writerow({
+        "SG ID": safeguard["sgId"],
+        "Safeguard Name": safeguard["sgName"],
+        "Description": safeguard["info"][0]["Description"],
+        "Directive": safeguard["info"][0]["Directive"],
+        "Preventive": safeguard["info"][0]["Preventive"],
+        "Detective": safeguard["info"][0]["Detective"],
+        "Corrective": safeguard["info"][0]["Corrective"],
+        "Project Maintainer": safeguard["info"][0]["Project Maintainer"],
+        "Administrator": safeguard["info"][0]["Administrator"],
+        "Downstream User": safeguard["info"][0]["Downstream User"],
+    })
 
 safeguard_csv.close()
 
@@ -135,15 +138,42 @@ for reference in references_json:
             for ecosystem in ecosystems:
                 for package in packages:
                     for content in contents:
-                        reference_write.writerow({"title": reference["title"],
-                                                "link": reference["link"],
-                                                "avId": vector["avId"],
-                                                "avName": vector["avName"],
-                                                "sgId": safeguard["sgId"],
-                                                "sgName": safeguard["sgName"],
-                                                "ecosystems": ecosystem,
-                                                "packages": package,
-                                                "contents": content,
-                                                "year": year})
+                        reference_write.writerow({
+                            "title": reference["title"],
+                            "link": reference["link"],
+                            "avId": vector["avId"],
+                            "avName": vector["avName"],
+                            "sgId": safeguard["sgId"],
+                            "sgName": safeguard["sgName"],
+                            "ecosystems": ecosystem,
+                            "packages": package,
+                            "contents": content,
+                            "year": year
+                        })
 
 reference_csv.close()
+
+# A recursive helper function to write rows for each attackvector and it's children (attack vectors)
+# If the child has more children (more child attack vector) recursively call this func
+def taxonomy_writerow(taxonomy_write, attackvector, children):
+    for child in children:
+        taxonomy_write.writerow({
+            "avName": attackvector["avName"],
+            "avId": attackvector["avId"],
+            "childAvName": child["avName"],
+            "childAvId": child["avId"]
+        })
+        if child.get("children") is not None:
+            taxonomy_writerow(taxonomy_write, child, child["children"])
+
+# Open CSV to store taxonomy of attack vectors
+taxonomy_csv = open("taxonomy.csv", "w")
+taxonomy_header = ["avName", "avId", "childAvName", "childAvId"]
+taxonomy_write = csv.DictWriter(taxonomy_csv, fieldnames=taxonomy_header)
+taxonomy_write.writeheader()
+
+# Recursively write <attack vector, child attack vector>
+taxonomy_writerow(taxonomy_write=taxonomy_write, attackvector=taxonomy_json, 
+                    children=taxonomy_json["children"])
+
+taxonomy_csv.close()

@@ -1,0 +1,117 @@
+avName,avId,childAvName,childAvId
+Conduct Open-Source Supply Chain Attack,AV-000,Develop and Advertise Distinct Malicious Package from Scratch,AV-100
+Conduct Open-Source Supply Chain Attack,AV-000,Create Name Confusion with Legitimate Package,AV-200
+Create Name Confusion with Legitimate Package,AV-200,Combosquatting,AV-201
+Create Name Confusion with Legitimate Package,AV-200,Altering Word Order,AV-202
+Create Name Confusion with Legitimate Package,AV-200,Manipulating Word Separators,AV-203
+Create Name Confusion with Legitimate Package,AV-200,Typosquatting,AV-204
+Create Name Confusion with Legitimate Package,AV-200,Built-In Package,AV-205
+Create Name Confusion with Legitimate Package,AV-200,Brandjacking,AV-206
+Create Name Confusion with Legitimate Package,AV-200,Omitting Scope or Namespace,AV-208
+Create Name Confusion with Legitimate Package,AV-200,Similarity Attack,AV-207
+Conduct Open-Source Supply Chain Attack,AV-000,Subvert Legitimate Package,AV-001
+Subvert Legitimate Package,AV-001,Inject into Sources of Legitimate Package,AV-300
+Inject into Sources of Legitimate Package,AV-300,Introduce Malicious Code through Hypocrite Merge Request,AV-301
+Introduce Malicious Code through Hypocrite Merge Request,AV-301,Make Immature Vulnerability Exploitable,AV-304
+Introduce Malicious Code through Hypocrite Merge Request,AV-301,Exploit Rendering Weakness,AV-305
+Exploit Rendering Weakness,AV-305,Exploit Unicode Bidirectional Algorithm,AV-306
+Exploit Rendering Weakness,AV-305,Use Homoglyphs,AV-307
+Exploit Rendering Weakness,AV-305,Prevent Display of File Differences,AV-308
+Exploit Rendering Weakness,AV-305,Hide in Generated/Compiled/Minified Code,AV-309
+Inject into Sources of Legitimate Package,AV-300,Contribute as Maintainer,AV-302
+Contribute as Maintainer,AV-302,Bribe or Blackmail Legitimate User,AV-601
+Contribute as Maintainer,AV-302,Take-over Legitimate Account,AV-602
+Take-over Legitimate Account,AV-602,Reuse of Compromised Credentials,AV-603
+Take-over Legitimate Account,AV-602,Bruteforce,AV-604
+Take-over Legitimate Account,AV-602,Reuse of Leaked API Tokens,AV-605
+Take-over Legitimate Account,AV-602,Social Engineering to Obtain Credentials,AV-606
+Take-over Legitimate Account,AV-602,Reuse of Existing Session,AV-607
+Take-over Legitimate Account,AV-602,Resurrect Expired Domain Associated With Legitimate Account,AV-608
+Contribute as Maintainer,AV-302,Become a Maintainer,AV-800
+Contribute as Maintainer,AV-302,Change Ethos,AV-801
+Contribute as Maintainer,AV-302,Compromise Maintainer System,AV-700
+Compromise Maintainer System,AV-700,Exploit Weak Configuration,AV-701
+Compromise Maintainer System,AV-700,Exploit Vulnerabilities,AV-702
+Compromise Maintainer System,AV-700,Infect through Malicious Component,AV-703
+Inject into Sources of Legitimate Package,AV-300,Tamper with Version Control System,AV-303
+Tamper with Version Control System,AV-303,Compromise User (Project Maintainer/Administrator),AV-600
+Compromise User (Project Maintainer/Administrator),AV-600,Bribe or Blackmail Legitimate User,AV-601
+Compromise User (Project Maintainer/Administrator),AV-600,Take-over Legitimate Account,AV-602
+Take-over Legitimate Account,AV-602,Reuse of Compromised Credentials,AV-603
+Take-over Legitimate Account,AV-602,Bruteforce,AV-604
+Take-over Legitimate Account,AV-602,Reuse of Leaked API Tokens,AV-605
+Take-over Legitimate Account,AV-602,Social Engineering to Obtain Credentials,AV-606
+Take-over Legitimate Account,AV-602,Reuse of Existing Session,AV-607
+Take-over Legitimate Account,AV-602,Resurrect Expired Domain Associated With Legitimate Account,AV-608
+Tamper with Version Control System,AV-303,Compromise Version Control System,AV-700
+Compromise Version Control System,AV-700,Exploit Weak Configuration,AV-701
+Compromise Version Control System,AV-700,Exploit Vulnerabilities,AV-702
+Compromise Version Control System,AV-700,Infect through Malicious Component,AV-703
+Subvert Legitimate Package,AV-001,Inject During the Build of Legitimate Package,AV-400
+Inject During the Build of Legitimate Package,AV-400,Run Malicious Build,AV-401
+Inject During the Build of Legitimate Package,AV-400,Tamper Build Job as Maintainer,AV-402
+Tamper Build Job as Maintainer,AV-402,Bribe or Blackmail Legitimate User,AV-601
+Tamper Build Job as Maintainer,AV-402,Take-over Legitimate Account,AV-602
+Take-over Legitimate Account,AV-602,Reuse of Compromised Credentials,AV-603
+Take-over Legitimate Account,AV-602,Bruteforce,AV-604
+Take-over Legitimate Account,AV-602,Reuse of Leaked API Tokens,AV-605
+Take-over Legitimate Account,AV-602,Social Engineering to Obtain Credentials,AV-606
+Take-over Legitimate Account,AV-602,Reuse of Existing Session,AV-607
+Take-over Legitimate Account,AV-602,Resurrect Expired Domain Associated With Legitimate Account,AV-608
+Tamper Build Job as Maintainer,AV-402,Become a Maintainer,AV-800
+Tamper Build Job as Maintainer,AV-402,Change Ethos,AV-801
+Tamper Build Job as Maintainer,AV-402,Compromise Maintainer System,AV-700
+Compromise Maintainer System,AV-700,Exploit Weak Configuration,AV-701
+Compromise Maintainer System,AV-700,Exploit Vulnerabilities,AV-702
+Compromise Maintainer System,AV-700,Infect through Malicious Component,AV-703
+Inject During the Build of Legitimate Package,AV-400,Tamper with Exposed Build System,AV-403
+Tamper with Exposed Build System,AV-403,Compromise User (Project Maintainer/Administrator),AV-600
+Compromise User (Project Maintainer/Administrator),AV-600,Bribe or Blackmail Legitimate User,AV-601
+Compromise User (Project Maintainer/Administrator),AV-600,Take-over Legitimate Account,AV-602
+Take-over Legitimate Account,AV-602,Reuse of Compromised Credentials,AV-603
+Take-over Legitimate Account,AV-602,Bruteforce,AV-604
+Take-over Legitimate Account,AV-602,Reuse of Leaked API Tokens,AV-605
+Take-over Legitimate Account,AV-602,Social Engineering to Obtain Credentials,AV-606
+Take-over Legitimate Account,AV-602,Reuse of Existing Session,AV-607
+Take-over Legitimate Account,AV-602,Resurrect Expired Domain Associated With Legitimate Account,AV-608
+Tamper with Exposed Build System,AV-403,Compromise Build System,AV-700
+Compromise Build System,AV-700,Exploit Weak Configuration,AV-701
+Compromise Build System,AV-700,Exploit Vulnerabilities,AV-702
+Compromise Build System,AV-700,Infect through Malicious Component,AV-703
+Subvert Legitimate Package,AV-001,Distribute Malicious Version of Legitimate Package,AV-500
+Distribute Malicious Version of Legitimate Package,AV-500,Dangling Reference,AV-501
+Distribute Malicious Version of Legitimate Package,AV-500,Mask Legitimate Package,AV-502
+Mask Legitimate Package,AV-502,MITM Attack,AV-506
+Mask Legitimate Package,AV-502,DNS Cache Poisoning,AV-507
+Mask Legitimate Package,AV-502,Tamper Legitimate URL,AV-508
+Mask Legitimate Package,AV-502,Abuse Dependency Resolution Mechanism,AV-509
+Distribute Malicious Version of Legitimate Package,AV-500,Prevent Update to Non-Vulnerable Version,AV-503
+Distribute Malicious Version of Legitimate Package,AV-500,Distribute as Package Maintainer,AV-504
+Distribute as Package Maintainer,AV-504,Bribe or Blackmail Legitimate User,AV-601
+Distribute as Package Maintainer,AV-504,Take-over Legitimate Account,AV-602
+Take-over Legitimate Account,AV-602,Reuse of Compromised Credentials,AV-603
+Take-over Legitimate Account,AV-602,Bruteforce,AV-604
+Take-over Legitimate Account,AV-602,Reuse of Leaked API Tokens,AV-605
+Take-over Legitimate Account,AV-602,Social Engineering to Obtain Credentials,AV-606
+Take-over Legitimate Account,AV-602,Reuse of Existing Session,AV-607
+Take-over Legitimate Account,AV-602,Resurrect Expired Domain Associated With Legitimate Account,AV-608
+Distribute as Package Maintainer,AV-504,Become a Maintainer,AV-800
+Distribute as Package Maintainer,AV-504,Change Ethos,AV-801
+Distribute as Package Maintainer,AV-504,Compromise Maintainer System,AV-700
+Compromise Maintainer System,AV-700,Exploit Weak Configuration,AV-701
+Compromise Maintainer System,AV-700,Exploit Vulnerabilities,AV-702
+Compromise Maintainer System,AV-700,Infect through Malicious Component,AV-703
+Distribute Malicious Version of Legitimate Package,AV-500,Inject into Hosting System,AV-505
+Inject into Hosting System,AV-505,Compromise User (Project Maintainer/Administrator),AV-600
+Compromise User (Project Maintainer/Administrator),AV-600,Bribe or Blackmail Legitimate User,AV-601
+Compromise User (Project Maintainer/Administrator),AV-600,Take-over Legitimate Account,AV-602
+Take-over Legitimate Account,AV-602,Reuse of Compromised Credentials,AV-603
+Take-over Legitimate Account,AV-602,Bruteforce,AV-604
+Take-over Legitimate Account,AV-602,Reuse of Leaked API Tokens,AV-605
+Take-over Legitimate Account,AV-602,Social Engineering to Obtain Credentials,AV-606
+Take-over Legitimate Account,AV-602,Reuse of Existing Session,AV-607
+Take-over Legitimate Account,AV-602,Resurrect Expired Domain Associated With Legitimate Account,AV-608
+Inject into Hosting System,AV-505,Compromise Hosting System,AV-700
+Compromise Hosting System,AV-700,Exploit Weak Configuration,AV-701
+Compromise Hosting System,AV-700,Exploit Vulnerabilities,AV-702
+Compromise Hosting System,AV-700,Infect through Malicious Component,AV-703
