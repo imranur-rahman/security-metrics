@@ -20,9 +20,9 @@ def authenticate_user():
 def check_code_signing(client, repo_name):
     print(client.get_user().login)
     repo = client.get_repo(repo_name)
-    commits = repo.get_commits().get_page(0) # 0-page already contains latest 30 commits
+    commits = repo.get_commits().get_page(0) # 0-th page already contains latest 30 commits
     print (len(commits))
-    # print(commits.totalCount)
+    assert len(commits) == NUMBER_OF_COMMITS_TO_CHECK
     # If all commits are signed return True
     ret = True
     for commit in commits:
