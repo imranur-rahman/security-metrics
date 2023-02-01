@@ -1,1 +1,3 @@
 security-metrics-implementation/access.py
+*.env
+risk-explorer-for-software-supply-chains/
