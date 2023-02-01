@@ -20,7 +20,8 @@ def authenticate_user():
 def check_code_signing(client, repo_name):
     print(client.get_user().login)
     repo = client.get_repo(repo_name)
-    commits = repo.get_commits()[:NUMBER_OF_COMMITS_TO_CHECK]
+    commits = repo.get_commits().get_page(0) # 0-page already contains latest 30 commits
+    print (len(commits))
     # print(commits.totalCount)
     # If all commits are signed return True
     ret = True
@@ -35,5 +36,6 @@ if __name__ == "__main__":
     load_access_token_in_env()
     client = authenticate_user()
     # signed_commits = check_code_signing(client=client, repo_name="PyGithub/PyGithub")
-    signed_commits = check_code_signing(client=client, repo_name="imranur-rahman/risk-explorer-for-software-supply-chains")
+    signed_commits = check_code_signing(client=client, repo_name="chromium/chromium")
+    # signed_commits = check_code_signing(client=client, repo_name="imranur-rahman/risk-explorer-for-software-supply-chains")
     print(f"signed_commit: {signed_commits}")
