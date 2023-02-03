@@ -1,5 +1,6 @@
 Repository,Is Signed Commit Enabled,Time Elapsed (s)
-PyGithub/PyGithub,False,5.109209299087524
-chromium/chromium,False,4.5374650955200195
-imranur-rahman/risk-explorer-for-software-supply-chains,True,4.634033918380737
-imranur-rahman/dns-cache-poisoning-attack-reloaded,False,2.54086971282959
+PyGithub/PyGithub,False,6.033933162689209
+chromium/chromium,False,4.849979877471924
+imranur-rahman/risk-explorer-for-software-supply-chains,True,5.268303155899048
+imranur-rahman/dns-cache-poisoning-attack-reloaded,False,2.707627058029175
+imranur-rahman/security-metrics,False,4.054740905761719

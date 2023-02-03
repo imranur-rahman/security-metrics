@@ -73,3 +73,6 @@ if __name__ == "__main__":
 
     repo = "imranur-rahman/dns-cache-poisoning-attack-reloaded"
     func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "imranur-rahman/security-metrics"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
