@@ -43,7 +43,7 @@ def check_signed_commit_with_time(client, repo_name):
 def open_csv_file():
     # Open CSV file to store the   data
     csv_file = open("signed_commit_demo.csv", "w")
-    header = ["Repository", "Is Signed Commit Enabled", "Time Elapsed (s)"]
+    header = ["Repository", "Is Signed Commit Enabled", "Time Elapsed (s)", "Repo URL"]
     writer = csv.DictWriter(csv_file, fieldnames=header)
     writer.writeheader()
     return writer
@@ -53,7 +53,8 @@ def func(csv_writer, client, repo_name):
     csv_writer.writerow({
         "Repository": repo_name,
         "Is Signed Commit Enabled": is_signed_commit_enabled,
-        "Time Elapsed (s)": time_elapsed
+        "Time Elapsed (s)": time_elapsed,
+        "Repo URL": "https://github.com/" + repo_name
     })
 
 if __name__ == "__main__":
@@ -75,4 +76,79 @@ if __name__ == "__main__":
     func(csv_writer=csv_writer, client=client, repo_name=repo)
 
     repo = "imranur-rahman/security-metrics"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "storaged-project/blivet"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "magma/magma"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "david942j/seccomp-tools"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "csutils/csmock"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "Mellanox/mstflint"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "niklasb/libc-database"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "ZhiningLiu1998/awesome-imbalanced-learning"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "david942j/one_gadget"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "Mansimran7/ASE_Group12_Hws"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "gabibi123/analise-gabriela"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "mirellalima07/analise"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "rodrigo081/rodrigo-andres-analise-e-projetos"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "IokioCaina/an-lise"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "tharsoj/analise"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "driiih/ANALISE-"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "pliang279/awesome-phd-advice"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "xairy/linux-kernel-exploitation"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "papers-we-love/papers-we-love"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "Beerkay/IoTResearch"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "husnainfareed/Awesome-Ethical-Hacking-Resources"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "missing-semester/missing-semester"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "MahdiMashrur/Awesome-Coding-Interview-Question-Patterns"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "yangshun/tech-interview-handbook"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "aalhour/awesome-compilers"
+    func(csv_writer=csv_writer, client=client, repo_name=repo)
+
+    repo = "Yale-LILY/FOLIO"
     func(csv_writer=csv_writer, client=client, repo_name=repo)
