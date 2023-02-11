@@ -181,7 +181,7 @@ def func(csv_writer, client, repo_name):
         "Repo URL": "https://github.com/" + repo_name
     })
 
-if __name__ == "__main__":
+def main():
     load_access_token_in_env()
     client = authenticate_user()
 
@@ -277,5 +277,5 @@ if __name__ == "__main__":
     repo = "Yale-LILY/FOLIO"
     func(csv_writer=csv_writer, client=client, repo_name=repo)
 
-
-    #main()
+if __name__ == "__main__":
+    main()
